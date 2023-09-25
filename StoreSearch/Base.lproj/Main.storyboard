@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" id="Yda-dl-tRo">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="tdC-ji-cJD">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="tdC-ji-cJD">
                                             <rect key="frame" x="16" y="5.5" width="343" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -40,7 +40,7 @@
                                                 <segment title="E-Books"/>
                                             </segments>
                                             <connections>
-                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2AR-LR-3Bi"/>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MJv-yf-9DG"/>
                                             </connections>
                                         </segmentedControl>
                                     </barButtonItem>
@@ -67,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="iw4-zy-eU1" id="IkI-1S-mPU"/>
+                        <outlet property="segmentedControl" destination="tdC-ji-cJD" id="BSJ-Z5-Kgr"/>
                         <outlet property="tableView" destination="OP2-kj-HLm" id="duy-il-Fii"/>
                     </connections>
                 </viewController>

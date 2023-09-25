@@ -39,12 +39,12 @@ class SearchViewController: UIViewController {
           forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
     }
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         performSearch()
     }
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     var dataTask: URLSessionDataTask?
     var hasSearched = false
@@ -152,21 +152,20 @@ extension SearchViewController: UISearchBarDelegate {
 
 
 // MARK: - Table View Delegate
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(
-    _ tableView: UITableView,
-    numberOfRowsInSection section: Int
-  ) -> Int {
-    if isLoading {
-      return 1
-    } else if !hasSearched {
-      return 0
-    } else if searchResults.count == 0 {
-      return 1
-    } else {
-      return searchResults.count
+extension SearchViewController: UITableViewDelegate,
+                                UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        if isLoading {
+            return 1
+          } else if !hasSearched {
+            return 1
+        } else {
+            return searchResults.count
+        }
     }
-  }
     
     func tableView(
       _ tableView: UITableView,
